@@ -36,5 +36,5 @@ public class Cell {
     public void setSelected(boolean selected) {
         isSelected = selected;
     }
-    
+
 }
