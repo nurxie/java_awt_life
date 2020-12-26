@@ -5,15 +5,12 @@ public class Cell {
     private int yCenter;
     private int radius;
     boolean isSelected = false;
-
     public void draw(Graphics g){
-        /*g.setColor(Color.black);
-        g.drawString("Score: " + " ", 20,50);*/
         g.setColor(Color.black);
-        g.fillOval(xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
+        g.fillRect(xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
         if (isSelected){
             g.setColor(Color.green);
-            g.fillOval(xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
+            g.fillRect(xCenter - radius, yCenter - radius, 2 * radius, 2 * radius);
         }
     }
 
