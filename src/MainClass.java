@@ -18,6 +18,7 @@ public class MainClass extends JFrame implements MouseListener {
     final public char FILLED = '#';
 
     Cell[][] cell = new  Cell[y_define][x_define];
+    Settings settings = new Settings();
 
     char[][] mass_income = new char[y_define+1][x_define+1];
     char[][] mass_outcome = new char[y_define+1][x_define+1];
@@ -153,6 +154,10 @@ public class MainClass extends JFrame implements MouseListener {
             }
     }
     public void startGame(){
+        settings.setRadius(radius);
+        settings.setX_define(x_define);
+        settings.setY_define(y_define);
+        settings.createFrame();
         initCells();
         arrayInit();
         fill_mass_with_unfill(mass_outcome);
